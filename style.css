@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+    background-size: 600% 600%;
+    animation: bgMove 12s ease infinite;
+    overflow-x: hidden;
+}
+@keyframes bgMove {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.container {
+    margin-top: 60px;
+    padding: 30px;
+    width: 85%;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
+h2 {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 25px #00ffff;
+}
+input {
+    padding: 12px;
+    width: 250px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: #111;
+    color: #00ffff;
+    box-shadow: 0 0 10px #00ffff;
+}
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #ff00ff;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff;
+    transition: 0.3s;
+}
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #ff00ff, 0 0 50px #ff00ff;
+}
+canvas {
+    margin-top: 30px;
+}
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: #ffffff;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
