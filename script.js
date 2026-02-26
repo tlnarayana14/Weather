@@ -1,6 +1,7 @@
 const apiKey = "5deb14c078acb277bb20988cf89b70c5";
 const button = document.getElementById("getWeather");
 const cityInput = document.getElementById("city");
+document.getElementById("year").textContent = new Date().getFullYear();
 const buildURL = city =>
     `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 const fetchWeatherAsync = async city => {
@@ -90,4 +91,5 @@ const createSnow = () => {
     document.body.appendChild(snow);
     setTimeout(() => snow.remove(), 5000);
 };
+
 setInterval(createSnow, 150);
