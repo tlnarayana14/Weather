@@ -64,8 +64,19 @@ canvas {
     opacity: 0.8;
     animation: fall linear infinite;
 }
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;   /* remove if you don’t want sticky footer */
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
 @keyframes fall {
     to {
         transform: translateY(100vh);
     }
+
 }
